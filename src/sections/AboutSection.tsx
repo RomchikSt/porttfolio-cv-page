@@ -36,15 +36,15 @@ function AboutSection() {
 
   const knowMe = [
     {
-      text: `I am a Web Developer. My work involves building and optimizing interactive features of websites and web applications, contributing to the success of the end product. Take a look at some of my diverse projects in the  `,
+      text: `I am a Web Developer. My work involves creating and optimizing interactive features of websites and web applications. You can view some of my projects in the `,
       link: "portfolio",
-      textLink: "Portfolio",
+      textLink: "Portfolio.",
     },
     {
-      text: `My development skills are focused on cross-browser development, ensuring compatibility and optimal functioning of web applications across different browsers and devices. This includes effective adaptation of web applications for desktops, mobile phones, and tablets.`,
+      text: `My development skills are focused on creating user-friendly interfaces, developing responsive interfaces, optimizing for cross-browser compatibility and implementing user interface logic and design principles.`,
     },
     {
-      text: `My ability to continuously learn and keep up with the latest technologies allows me to effectively meet the challenges of modern projects, ensuring flexibility and a high level of quality in development.`,
+      text: `My ability to constantly learn and keep up with the latest technologies allows me to effectively solve the challenges of modern projects, ensuring flexibility and a high level of development quality.`,
     },
     {
       text: `In my free time, I enjoy playing tennis and chess, which helps me develop strategic thinking and focus. Additionally, I love engaging in outdoor activities, which keeps me energetic and inspired for new projects.
@@ -53,7 +53,7 @@ function AboutSection() {
     {
       text: `Open to collaboration opportunities where I can contribute, learn, and grow. If you have a good opportunity that matches my skills and experience, don't hesitate to `,
       link: "contact",
-      textLink: "contact me",
+      textLink: "contact me.",
     },
   ];
 

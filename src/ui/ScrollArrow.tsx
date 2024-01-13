@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import {
+  scrollArrowBoxVariants,
+  scrollArrowVariants,
+} from "@/animations/share/scrollArrow";
 
 const AnimatedSpan = styled(motion.span)`
   position: absolute;
@@ -17,14 +21,15 @@ function ScrollArrow() {
   return (
     <motion.div
       className="mb-[4rem] absolute left-1/2 bottom-[4rem] -translate-x-1/2 1200px:hidden 1024px:ml-[4rem] 1024px:mb-[4rem]"
-      initial={{ y: "50%", opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.8 }}
+      variants={scrollArrowBoxVariants}
+      initial="initial"
+      animate="animate"
     >
       {[0, 0.5, 1].map((item: number, i: number) => (
         <AnimatedSpan
           key={i}
-          animate={{ opacity: [0, 1, 0] }}
+          variants={scrollArrowVariants}
+          animate="animate"
           transition={{
             repeat: Infinity,
             ease: "linear",

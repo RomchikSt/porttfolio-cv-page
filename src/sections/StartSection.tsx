@@ -1,9 +1,11 @@
+import { startSectionButtonVariants } from "@/animations/share/button";
 import ScrollArrow from "@/ui/ScrollArrow";
 import ScrollMouse from "@/ui/ScrollMouse";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import Button from "../ui/Button";
 
 function StartSection() {
   const [imgWidth, setImgWidth] = useState<number>(500);
@@ -59,32 +61,14 @@ function StartSection() {
         ))}
         <div className="flex justify-start mt-14">
           <Link to="portfolio" smooth duration={500}>
-            <motion.button
-              className="pointer-events-auto w-44 h-12 bg-transparent border rounded-xl border-custom-green ml-1 flex items-center justify-center "
-              initial={{ y: "70%", opacity: 0 }}
-              animate={{
-                y: 0,
-                opacity: 1,
-                transition: { duration: 0.5, delay: 0.7 },
-              }}
-              whileHover={{
-                backgroundColor: "#0aff9d",
-                scale: 1.05,
-                transition: { duration: 0.3 },
-              }}
-              transition={{
-                backgroundColor: { duration: 0.3 },
-                scale: { duration: 0.3 },
-              }}
+            <Button
+              animationVariants={startSectionButtonVariants}
+              animateState={"animate"}
             >
-              <motion.p
-                className="m-0 w-full h-full text-center flex items-center justify-center"
-                initial={{ color: "#FFFFFF" }}
-                whileHover={{ color: "#111111" }}
-              >
+              <motion.p className="m-0 w-full h-full text-center flex items-center justify-center hover:text-black transition-colors duration-300">
                 My Projects
               </motion.p>
-            </motion.button>
+            </Button>
           </Link>
         </div>
         {animation && (
