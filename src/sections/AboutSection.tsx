@@ -15,8 +15,6 @@ import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
 import HeaderText from "@/ui/HeaderText";
 import { headerTextVariants } from "@/animations/headerText";
-import { headerTextDescVariants } from "@/animations/headerTextDesc";
-import HeaderTextDesc from "@/ui/HeaderTextDesc";
 
 function AboutSection() {
   const [refHeader, inViewHeader] = useInView({
