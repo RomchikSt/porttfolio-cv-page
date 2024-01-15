@@ -1,14 +1,16 @@
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { Element, scroller } from "react-scroll";
+
+import HeadSection from "./HeadSection";
+
 import StartSection from "../sections/StartSection";
 import HeaderSection from "../sections/HeaderSection";
 import AboutSection from "../sections/AboutSection";
 import PortfolioSection from "../sections/PortfolioSection";
 import ContactSection from "../sections/ContactSection";
-import { Element, scroller } from "react-scroll";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useState, useRef, use } from "react";
-import MobileNavSection from "@/sections/MobileNavSection";
-import ExpSection from "@/sections/ExpSection";
-import HeadSection from "./HeadSection";
+import ExpSection from "../sections/ExpSection";
+import MobileNavSection from "../sections/MobileNavSection";
 
 export default function Home() {
   const [isOpenMobileNav, setIsOpenMobileNav] = useState<boolean>(false);

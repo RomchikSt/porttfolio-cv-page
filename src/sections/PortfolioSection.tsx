@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
-import { RiGithubFill } from "react-icons/ri";
-import { FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-import OpenInNewRoundedIcon from "@mui/icons-material/OpenInNewRounded";
+
+import { headerTextVariants } from "../animations/headerText";
+import HeaderText from "../ui/HeaderText";
+
 import { IoPlayCircleOutline } from "react-icons/io5";
-import { headerTextVariants } from "@/animations/headerText";
-import HeaderText from "@/ui/HeaderText";
+import { RiGithubFill } from "react-icons/ri";
+import OpenInNewRoundedIcon from "@mui/icons-material/OpenInNewRounded";
 
 type PlayingStatus = {
   [key: number]: { playing: boolean; animate: boolean };
@@ -95,9 +96,7 @@ function PortfolioSection() {
         "This is a full-stack web application for a tire shop. Offer an intuitive and user-friendly experience for purchasing tires. The website includes advanced filters for easy tire selection and is fully responsive, ensuring optimal performance on all browsers and screen sizes. The platform simplifies the tire buying process with its clear design and efficient functionality.",
       stack: ["TS", "React", "i18-next", "M Ui", "Framer Motion", "MySQL"],
       githubLink: "",
-      gitHubIcon: <RiGithubFill size={30} />,
       link: "",
-      externalLinkIcon: <FiExternalLink size={30} />,
       video: "./video/WildOasisTrailer.mp4",
     },
     {
@@ -107,9 +106,7 @@ function PortfolioSection() {
         "This portfolio-CV website showcases my professional journey and creative projects. Featuring animations, video trailers of my work, a brief introduction about myself, and an overview of my professional experience, the site is a comprehensive representation of my skills and achievements. Fully responsive and optimized for all browsers and screen sizes.",
       stack: ["TS", "React", "Next.js", "Tailwind", "Framer Motion"],
       githubLink: "",
-      gitHubIcon: <RiGithubFill size={30} />,
       link: "",
-      externalLinkIcon: <FiExternalLink size={30} />,
       video: "./video/WildOasisTrailer.mp4",
     },
     {

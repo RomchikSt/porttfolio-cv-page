@@ -1,11 +1,12 @@
-import { startSectionButtonVariants } from "@/animations/button";
-import ScrollArrow from "@/ui/ScrollArrow";
-import ScrollMouse from "@/ui/ScrollMouse";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+
+import ScrollArrow from "../ui/ScrollArrow";
+import ScrollMouse from "../ui/ScrollMouse";
 import Button from "../ui/Button";
+import { startSectionButtonVariants } from "../animations/button";
 
 function StartSection() {
   const [imgWidth, setImgWidth] = useState<number>(500);

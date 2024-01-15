@@ -1,5 +1,10 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Link } from "react-scroll";
+
 import { SiRedux, SiVite } from "react-icons/si";
 import { RiSupabaseFill } from "react-icons/ri";
+import { FaGitAlt } from "react-icons/fa6";
 import {
   BiLogoNodejs,
   BiLogoDocker,
@@ -9,12 +14,9 @@ import {
   BiLogoJavascript,
   BiLogoTypescript,
 } from "react-icons/bi";
-import { FaGitAlt } from "react-icons/fa6";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { Link } from "react-scroll";
-import HeaderText from "@/ui/HeaderText";
-import { headerTextVariants } from "@/animations/headerText";
+
+import HeaderText from "../ui/HeaderText";
+import { headerTextVariants } from "../animations/headerText";
 
 function AboutSection() {
   const [refHeader, inViewHeader] = useInView({

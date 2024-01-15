@@ -1,9 +1,8 @@
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import { FaHome } from "react-icons/fa";
+
 import { BsFillInfoCircleFill } from "react-icons/bs";
-import { FaBriefcase } from "react-icons/fa";
+import { FaBriefcase, FaHome } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { MdHomeWork } from "react-icons/md";
 

@@ -1,9 +1,9 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-scroll";
-import { FaHome } from "react-icons/fa";
+
 import { BsFillInfoCircleFill } from "react-icons/bs";
-import { FaBriefcase } from "react-icons/fa";
+import { FaBriefcase, FaHome } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { MdHomeWork } from "react-icons/md";
 

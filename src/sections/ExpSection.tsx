@@ -1,7 +1,8 @@
-import { headerTextVariants } from "@/animations/headerText";
-import HeaderText from "@/ui/HeaderText";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
+import { headerTextVariants } from "../animations/headerText";
+import HeaderText from "../ui/HeaderText";
 
 function ExpSection() {
   const [refHeader, inViewHeader] = useInView({

@@ -1,12 +1,14 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaLinkedin, FaGithub, FaInstagram, FaTelegram } from "react-icons/fa";
 import styled from "styled-components";
-import { useState } from "react";
-import { contactSectionButtonVariants } from "@/animations/button";
+
+import { FaLinkedin, FaGithub, FaInstagram, FaTelegram } from "react-icons/fa";
+
+import { contactSectionButtonVariants } from "../animations/button";
 import Button from "../ui/Button";
-import { headerTextVariants } from "@/animations/headerText";
-import HeaderText from "@/ui/HeaderText";
+import { headerTextVariants } from "../animations/headerText";
+import HeaderText from "../ui/HeaderText";
 
 const ReactIcon = styled.div`
   svg {
