@@ -13,6 +13,10 @@ import { FaGitAlt } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
+import HeaderText from "@/ui/HeaderText";
+import { headerTextVariants } from "@/animations/headerText";
+import { headerTextDescVariants } from "@/animations/headerTextDesc";
+import HeaderTextDesc from "@/ui/HeaderTextDesc";
 
 function AboutSection() {
   const [refHeader, inViewHeader] = useInView({
@@ -23,16 +27,6 @@ function AboutSection() {
     triggerOnce: true,
     threshold: 0.15,
   });
-
-  const headerAnimation = {
-    initial: { y: "50%", opacity: 0 },
-    animate: inViewHeader ? { y: 0, opacity: 1 } : {},
-  };
-
-  const skillAnimation = {
-    initial: { y: "20%", opacity: 0 },
-    animate: inViewSkill ? { y: 0, opacity: 1 } : {},
-  };
 
   const knowMe = [
     {
@@ -126,19 +120,19 @@ function AboutSection() {
 
   return (
     <div className="m-auto text-center flex flex-col items-center py-[3%] min-h-[60vh] 1300px:items-center">
-      <motion.h2
-        className="text-5xl font-bold py-4 border-b-4 border-custom-green"
+      <HeaderText
         ref={refHeader}
-        {...headerAnimation}
-        transition={{ duration: 0.5 }}
+        variants={headerTextVariants}
+        animate={inViewHeader ? "inView" : "outOfView"}
       >
         About
-      </motion.h2>
+      </HeaderText>
       <motion.p
         className="mt-4 text-xl w-3/5 1300px:w-5/12"
         ref={refHeader}
-        {...headerAnimation}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        initial={{ y: "50%", opacity: 0 }}
+        animate={inViewHeader ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         Here you will find more information about me, what I do, and my current
         skills of programming and technology
@@ -146,7 +140,8 @@ function AboutSection() {
       <motion.div
         className="flex mt-20 items-center justify-around 1300px:justify-between"
         ref={refSkill}
-        {...headerAnimation}
+        initial={{ y: "50%", opacity: 0 }}
+        animate={inViewHeader ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
         <div className="flex flex-col items-center 1300px:items-start gap-20 1300px:flex-row 1300px:justify-center 1400px:justify-around 1400px:gap-0">
@@ -154,7 +149,8 @@ function AboutSection() {
             <motion.p
               className="text-2xl text-custom-green font-semibold mb-6"
               ref={refSkill}
-              {...headerAnimation}
+              initial={{ y: "50%", opacity: 0 }}
+              animate={inViewHeader ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               Get to know me!
@@ -164,7 +160,8 @@ function AboutSection() {
                 key={i}
                 className="mt-4 text-l text-start"
                 ref={refSkill}
-                {...headerAnimation}
+                initial={{ y: "50%", opacity: 0 }}
+                animate={inViewHeader ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.2 + i / 10 }}
               >
                 {text.text}
@@ -187,7 +184,8 @@ function AboutSection() {
                 <motion.div
                   key={tech.name}
                   ref={refSkill}
-                  {...skillAnimation}
+                  initial={{ y: "20%", opacity: 0 }}
+                  animate={inViewSkill ? { y: 0, opacity: 1 } : {}}
                   transition={{ duration: 0.5, delay: 0.1 + i / 10 }}
                 >
                   <div className="flex flex-col items-center text-center">
@@ -202,7 +200,8 @@ function AboutSection() {
                 <motion.div
                   key={tech.name}
                   ref={refSkill}
-                  {...skillAnimation}
+                  initial={{ y: "20%", opacity: 0 }}
+                  animate={inViewSkill ? { y: 0, opacity: 1 } : {}}
                   transition={{ duration: 0.5, delay: 0.1 + i / 10 }}
                 >
                   <div className="flex flex-col items-center text-center">
@@ -216,7 +215,8 @@ function AboutSection() {
               <motion.p
                 className="text-xl text-custom-green font-semibold text-start mb-4"
                 ref={refSkill}
-                {...skillAnimation}
+                initial={{ y: "20%", opacity: 0 }}
+                animate={inViewSkill ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
                 React Tech Stack:
@@ -226,7 +226,8 @@ function AboutSection() {
                   <motion.div
                     key={tech}
                     ref={refSkill}
-                    {...skillAnimation}
+                    initial={{ y: "20%", opacity: 0 }}
+                    animate={inViewSkill ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.2 + i / 30 }}
                   >
                     <p className="p-1.5 px-2.5 rounded-2xl m-1 bg-custom bg-custom-black-main">

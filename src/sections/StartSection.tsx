@@ -1,4 +1,4 @@
-import { startSectionButtonVariants } from "@/animations/share/button";
+import { startSectionButtonVariants } from "@/animations/button";
 import ScrollArrow from "@/ui/ScrollArrow";
 import ScrollMouse from "@/ui/ScrollMouse";
 import { motion } from "framer-motion";

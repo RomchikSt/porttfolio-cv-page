@@ -1,5 +1,4 @@
 import { Variants, motion } from "framer-motion";
-import { InViewHookResponse } from "react-intersection-observer";
 
 type ButtonProps = {
   children: React.ReactNode;

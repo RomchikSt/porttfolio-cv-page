@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {
   scrollArrowBoxVariants,
   scrollArrowVariants,
-} from "@/animations/share/scrollArrow";
+} from "@/animations/scrollArrow";
 
 const AnimatedSpan = styled(motion.span)`
   position: absolute;

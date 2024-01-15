@@ -7,6 +7,8 @@ import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import OpenInNewRoundedIcon from "@mui/icons-material/OpenInNewRounded";
 import { IoPlayCircleOutline } from "react-icons/io5";
+import { headerTextVariants } from "@/animations/headerText";
+import HeaderText from "@/ui/HeaderText";
 
 type PlayingStatus = {
   [key: number]: { playing: boolean; animate: boolean };
@@ -125,21 +127,19 @@ function PortfolioSection() {
   return (
     <>
       <div className="mx-auto mt-6 text-center flex flex-col items-center py-[5%] mb-8 1300px:mb-16">
-        <motion.h2
-          className="text-5xl font-bold py-4 border-b-4 border-custom-green"
+        <HeaderText
           ref={refHeader}
-          initial={{ y: "50%", opacity: 0 }}
-          animate={inViewHeader ? { y: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.5 }}
+          variants={headerTextVariants}
+          animate={inViewHeader ? "inView" : "outOfView"}
         >
           Portfolio
-        </motion.h2>
+        </HeaderText>
         <motion.p
           className="mt-4 text-xl w-3/5 1300px:w-5/12"
           ref={refHeader}
           initial={{ y: "50%", opacity: 0 }}
           animate={inViewHeader ? { y: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           Here you will find some of the personal and clients projects that I
           created with each project containing short description

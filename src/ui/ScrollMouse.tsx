@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import {
   scrollMouseBoxVariants,
   scrollMouseWheelVariants,
-} from "../animations/share/scrollMouse";
+} from "../animations/scrollMouse";
 
 function ScrollMouse() {
   return (

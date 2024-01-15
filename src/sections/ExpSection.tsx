@@ -1,3 +1,5 @@
+import { headerTextVariants } from "@/animations/headerText";
+import HeaderText from "@/ui/HeaderText";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -10,16 +12,6 @@ function ExpSection() {
     triggerOnce: true,
     threshold: 0.15,
   });
-
-  const headerAnimation = {
-    initial: { y: "50%", opacity: 0 },
-    animate: inViewHeader ? { y: 0, opacity: 1 } : {},
-  };
-
-  const descAnimation = {
-    initial: { y: "40%", opacity: 0 },
-    animate: inViewDesc ? { y: 0, opacity: 1 } : {},
-  };
 
   const workInfo = [
     {
@@ -42,32 +34,21 @@ function ExpSection() {
     },
   ];
 
-  const reactTechStack = [
-    "TypeScript",
-    "React",
-    "Redux",
-    "Framer Motion",
-    "i18next",
-    "Material UI",
-    "Git",
-    "GitHub",
-  ];
-
   return (
     <div className="w-full pt-14 flex flex-col items-center min-h-[75vh]">
       <div className="text-center flex flex-col items-center w-5/12 mb-12">
-        <motion.h2
-          className="inline-block text-5xl font-bold py-4 border-b-4 border-custom-green"
+        <HeaderText
           ref={refHeader}
-          {...headerAnimation}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          variants={headerTextVariants}
+          animate={inViewHeader ? "inView" : "outOfView"}
         >
           Experience
-        </motion.h2>
+        </HeaderText>
         <motion.p
-          className="mt-4 text-xl "
+          className="mt-4 text-xl w-3/5 1300px:w-5/12"
           ref={refHeader}
-          {...headerAnimation}
+          initial={{ y: "50%", opacity: 0 }}
+          animate={inViewHeader ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           Explore my professional journey
@@ -78,7 +59,8 @@ function ExpSection() {
           <motion.div
             key={i}
             className="flex m-4 gap-2 flex-col items-start border rounded-3xl border-custom-green mt-8 p-6 bg-custom-black w-9/12 837px:w-3/5 1300px:w-[50rem]"
-            {...descAnimation}
+            initial={{ y: "40%", opacity: 0 }}
+            animate={inViewDesc ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <div className="flex justify-between w-full">
