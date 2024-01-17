@@ -117,7 +117,7 @@ function PortfolioSection() {
       stack: ["JS", "React", "Styled-Components", "Supabase", "Vite"],
       githubLink:
         "https://github.com/RomchikSt/other-portfolio-projects/tree/master/Websites/Wild%20Oasis",
-      externalLink: "https://rstp-wild-oasis.netlify.app",
+      link: "https://rstp-wild-oasis.netlify.app/",
       video: "./video/wildOasisTrailer.mp4",
     },
   ];
