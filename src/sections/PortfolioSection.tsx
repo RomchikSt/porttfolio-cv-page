@@ -103,7 +103,7 @@ function PortfolioSection() {
       id: 1,
       title: "Portfolio v.1",
       description:
-        "This portfolio-CV website showcases my professional journey and creative projects. Featuring animations, video trailers of my work, a brief introduction about myself, and an overview of my professional experience, the site is a comprehensive representation of my skills and achievements. Fully responsive and optimized for all browsers and screen sizes.",
+        "This is portfolio-CV website showcases my professional journey and creative projects. Featuring animations, video trailers of my work, a brief introduction about myself, and an overview of my professional experience, the site is a comprehensive representation of my skills and achievements. Fully responsive and optimized for all browsers and screen sizes.",
       stack: ["TS", "React", "Next.js", "Tailwind", "Framer Motion"],
       githubLink: "https://github.com/RomchikSt/porttfolio-cv-page",
       link: "https://roma-stakhiv.vercel.app/",

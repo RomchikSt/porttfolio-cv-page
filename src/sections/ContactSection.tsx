@@ -116,8 +116,8 @@ function ContactSection() {
             animateState={inViewDesc ? "inView" : "outOfView"}
           >
             <a
-              href="./img/socialImg.png"
-              download="socialImg.png"
+              href="./cv/RomanStakhiv-CV.pdf"
+              download="RomanStakhiv-CV.pdf"
               className="m-0 absolute top-0 left-0 w-full h-full text-center flex items-center justify-center"
             >
               Download CV
