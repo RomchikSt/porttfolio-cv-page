@@ -120,13 +120,15 @@ function AboutSection() {
 
   return (
     <div className="m-auto text-center flex flex-col items-center py-[3%] min-h-[60vh] 1300px:items-center">
-      <HeaderText
+      <motion.h2
+        className="text-5xl font-bold py-4 border-b-4 border-custom-green"
         ref={refHeader}
         variants={headerTextVariants}
+        initial="initial"
         animate={inViewHeader ? "inView" : "outOfView"}
       >
         About
-      </HeaderText>
+      </motion.h2>
       <motion.p
         className="mt-4 text-xl w-3/5 1300px:w-5/12"
         ref={refHeader}

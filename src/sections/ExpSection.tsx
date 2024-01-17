@@ -17,7 +17,7 @@ function ExpSection() {
   const workInfo = [
     {
       company: "Self-employed",
-      position: "React Engineer",
+      position: "Front-End Developer",
       location: "Kyiv, Ukraine",
       date: "2023-present",
       description:
@@ -38,15 +38,17 @@ function ExpSection() {
   return (
     <div className="w-full pt-14 flex flex-col items-center min-h-[75vh]">
       <div className="text-center flex flex-col items-center w-5/12 mb-12">
-        <HeaderText
+        <motion.h2
+          className="text-5xl font-bold py-4 border-b-4 border-custom-green"
           ref={refHeader}
           variants={headerTextVariants}
+          initial="initial"
           animate={inViewHeader ? "inView" : "outOfView"}
         >
           Experience
-        </HeaderText>
+        </motion.h2>
         <motion.p
-          className="mt-4 text-xl w-3/5 1300px:w-5/12"
+          className="mt-4 text-xl"
           ref={refHeader}
           initial={{ y: "50%", opacity: 0 }}
           animate={inViewHeader ? { y: 0, opacity: 1 } : {}}

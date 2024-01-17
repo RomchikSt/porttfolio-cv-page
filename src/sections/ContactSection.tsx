@@ -66,15 +66,17 @@ function ContactSection() {
   return (
     <div className="w-full overflow-y-auto min-h-[50rem] h-screen pt-14 flex flex-col justify-between items-center 2100px:h-[60rem]">
       <div className="text-center flex flex-col items-center w-5/12">
-        <HeaderText
+        <motion.h2
+          className="text-5xl font-bold py-4 border-b-4 border-custom-green"
           ref={refHeader}
           variants={headerTextVariants}
+          initial="initial"
           animate={inViewHeader ? "inView" : "outOfView"}
         >
           Contact
-        </HeaderText>
+        </motion.h2>
         <motion.p
-          className="mt-4 text-xl w-3/5 1300px:w-5/12"
+          className="mt-4 text-xl "
           ref={refHeader}
           initial={{ y: "50%", opacity: 0 }}
           animate={inViewHeader ? { y: 0, opacity: 1 } : {}}

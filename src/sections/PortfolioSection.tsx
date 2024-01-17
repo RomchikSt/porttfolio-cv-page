@@ -5,7 +5,6 @@ import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 
 import { headerTextVariants } from "../animations/headerText";
-import HeaderText from "../ui/HeaderText";
 
 import { IoPlayCircleOutline } from "react-icons/io5";
 import { RiGithubFill } from "react-icons/ri";
@@ -15,7 +14,7 @@ type PlayingStatus = {
   [key: number]: { playing: boolean; animate: boolean };
 };
 
-const ReactIcon = styled.div`
+const ReactIcon = styled.a`
   svg {
     fill: #f0fdf4;
     transition: all 0.3s ease-in-out;
@@ -44,32 +43,33 @@ function PortfolioSection() {
   });
 
   useEffect(() => {
-    const userAgent = navigator.userAgent;
-    const isAndroid = /Android/i.test(userAgent);
-    const isIOS = /iPhone|iPod/i.test(userAgent);
-
     const handleChangeText = () => {
       if (window.innerWidth < 450) {
         setVideoSize(140);
         setTextAbsolute(false);
+        setIsMobileDevice(true);
       } else if (window.innerWidth >= 450 && window.innerWidth < 700) {
         setVideoSize(200);
         setTextAbsolute(false);
+        setIsMobileDevice(true);
       } else if (window.innerWidth >= 700 && window.innerWidth < 1300) {
         setVideoSize(305);
         setTextAbsolute(false);
+        setIsMobileDevice(false);
       } else if (window.innerWidth >= 1300 && window.innerWidth < 1700) {
         setVideoSize(305);
         setTextAbsolute(true);
+        setIsMobileDevice(false);
       } else if (window.innerWidth >= 1700) {
         setVideoSize(360);
         setTextAbsolute(true);
+        setIsMobileDevice(false);
       }
     };
 
     handleChangeText();
     setIsMounted(true);
-    setIsMobileDevice(isAndroid || isIOS);
+
     window.addEventListener("resize", handleChangeText);
     return () => window.removeEventListener("resize", handleChangeText);
   }, []);
@@ -95,8 +95,8 @@ function PortfolioSection() {
       description:
         "This is a full-stack web application for a tire shop. Offer an intuitive and user-friendly experience for purchasing tires. The website includes advanced filters for easy tire selection and is fully responsive, ensuring optimal performance on all browsers and screen sizes. The platform simplifies the tire buying process with its clear design and efficient functionality.",
       stack: ["TS", "React", "i18-next", "M Ui", "Framer Motion", "MySQL"],
-      githubLink: "",
-      link: "",
+      githubLink: "https://github.com/unreal998/top-kolesa-fe",
+      link: "https://top-kolesa-fe.vercel.app/",
       video: "./video/WildOasisTrailer.mp4",
     },
     {
@@ -124,13 +124,15 @@ function PortfolioSection() {
   return (
     <>
       <div className="mx-auto mt-6 text-center flex flex-col items-center py-[5%] mb-8 1300px:mb-16">
-        <HeaderText
+        <motion.h2
+          className="text-5xl font-bold py-4 border-b-4 border-custom-green"
           ref={refHeader}
           variants={headerTextVariants}
+          initial="initial"
           animate={inViewHeader ? "inView" : "outOfView"}
         >
           Portfolio
-        </HeaderText>
+        </motion.h2>
         <motion.p
           className="mt-4 text-xl w-3/5 1300px:w-5/12"
           ref={refHeader}
@@ -241,7 +243,11 @@ function PortfolioSection() {
                       animate={inViewVideo ? { y: 0, opacity: 1 } : {}}
                       transition={{ duration: 0.5, delay: 0.9 }}
                     >
-                      <ReactIcon className="cursor-pointer">
+                      <ReactIcon
+                        className="cursor-pointer"
+                        target="_blank"
+                        href={project.githubLink}
+                      >
                         <RiGithubFill size={"1.8rem"} />
                       </ReactIcon>
                     </motion.div>
@@ -250,7 +256,11 @@ function PortfolioSection() {
                       animate={inViewVideo ? { y: 0, opacity: 1 } : {}}
                       transition={{ duration: 0.5, delay: 1 }}
                     >
-                      <ReactIcon className="cursor-pointer">
+                      <ReactIcon
+                        className="cursor-pointer"
+                        target="_blank"
+                        href={project.link}
+                      >
                         <OpenInNewRoundedIcon style={{ fontSize: "1.8rem" }} />
                       </ReactIcon>
                     </motion.div>
