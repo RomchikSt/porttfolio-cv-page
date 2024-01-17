@@ -8,7 +8,6 @@ import { FaLinkedin, FaGithub, FaInstagram, FaTelegram } from "react-icons/fa";
 import { contactSectionButtonVariants } from "../animations/button";
 import Button from "../ui/Button";
 import { headerTextVariants } from "../animations/headerText";
-import HeaderText from "../ui/HeaderText";
 
 const ReactIcon = styled.div`
   svg {

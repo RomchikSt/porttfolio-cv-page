@@ -15,7 +15,6 @@ import {
   BiLogoTypescript,
 } from "react-icons/bi";
 
-import HeaderText from "../ui/HeaderText";
 import { headerTextVariants } from "../animations/headerText";
 
 function AboutSection() {

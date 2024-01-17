@@ -97,7 +97,7 @@ function PortfolioSection() {
       stack: ["TS", "React", "i18-next", "M Ui", "Framer Motion", "MySQL"],
       githubLink: "https://github.com/unreal998/top-kolesa-fe",
       link: "https://top-kolesa-fe.vercel.app/",
-      video: "./video/WildOasisTrailer.mp4",
+      video: "./video/topKolesaTrailer.mp4",
     },
     {
       id: 1,
@@ -107,7 +107,7 @@ function PortfolioSection() {
       stack: ["TS", "React", "Next.js", "Tailwind", "Framer Motion"],
       githubLink: "",
       link: "",
-      video: "./video/WildOasisTrailer.mp4",
+      video: "./video/myPortfolio.mp4",
     },
     {
       id: 2,
@@ -117,7 +117,7 @@ function PortfolioSection() {
       stack: ["JS", "React", "Styled-Components", "Supabase", "Vite"],
       githubLink: "",
       externalLink: "",
-      video: "./video/WildOasisTrailer.mp4",
+      video: "./video/wildOasisTrailer.mp4",
     },
   ];
 
@@ -190,7 +190,7 @@ function PortfolioSection() {
                       </motion.div>
                     )}
                     <ReactPlayer
-                      url="./video/WildOasisTrailer.mp4"
+                      url={project.video}
                       playing={playingStatus[project.id]?.playing}
                       height={videoSize}
                     />
@@ -304,7 +304,7 @@ function PortfolioSection() {
                         </motion.div>
                       )}
                       <ReactPlayer
-                        url="./video/WildOasisTrailer.mp4"
+                        url={project.video}
                         playing={playingStatus[project.id]?.playing}
                         height={videoSize}
                       />
