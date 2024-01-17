@@ -118,7 +118,7 @@ function PortfolioSection() {
       githubLink:
         "https://github.com/RomchikSt/other-portfolio-projects/tree/master/Websites/Wild%20Oasis",
       link: "https://rstp-wild-oasis.netlify.app/",
-      video: "./video/wildOasisTrailer.mp4",
+      video: "./video/wildOasis.mp4",
     },
   ];
 
