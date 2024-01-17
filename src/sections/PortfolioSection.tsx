@@ -105,9 +105,9 @@ function PortfolioSection() {
       description:
         "This portfolio-CV website showcases my professional journey and creative projects. Featuring animations, video trailers of my work, a brief introduction about myself, and an overview of my professional experience, the site is a comprehensive representation of my skills and achievements. Fully responsive and optimized for all browsers and screen sizes.",
       stack: ["TS", "React", "Next.js", "Tailwind", "Framer Motion"],
-      githubLink: "",
-      link: "",
-      video: "./video/myPortfolio.mp4",
+      githubLink: "https://github.com/RomchikSt/porttfolio-cv-page",
+      link: "https://roma-stakhiv.vercel.app/",
+      video: "./video/myPortfolioTrailer.mp4",
     },
     {
       id: 2,
@@ -115,8 +115,9 @@ function PortfolioSection() {
       description:
         "This is a full-stack hotel management application, with the backend powered by Supabase. Designed to streamline the intricate tasks of hotel operations, this platform facilitates real-time room tracking, swift guest reservations, check-in and check-out processes, and generates insightful statistics about room occupancy and guest behavior. Desktop Only!",
       stack: ["JS", "React", "Styled-Components", "Supabase", "Vite"],
-      githubLink: "",
-      externalLink: "",
+      githubLink:
+        "https://github.com/RomchikSt/other-portfolio-projects/tree/master/Websites/Wild%20Oasis",
+      externalLink: "https://rstp-wild-oasis.netlify.app",
       video: "./video/wildOasisTrailer.mp4",
     },
   ];
@@ -357,7 +358,11 @@ function PortfolioSection() {
                         animate={inViewVideo ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: 0.6 }}
                       >
-                        <ReactIcon className="cursor-pointer">
+                        <ReactIcon
+                          className="cursor-pointer"
+                          target="_blank"
+                          href={project.githubLink}
+                        >
                           <RiGithubFill size={"1.8rem"} />
                         </ReactIcon>
                       </motion.div>
@@ -366,7 +371,11 @@ function PortfolioSection() {
                         animate={inViewVideo ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: 0.7 }}
                       >
-                        <ReactIcon className="cursor-pointer">
+                        <ReactIcon
+                          className="cursor-pointer"
+                          target="_blank"
+                          href={project.link}
+                        >
                           <OpenInNewRoundedIcon
                             style={{ fontSize: "1.8rem" }}
                           />
