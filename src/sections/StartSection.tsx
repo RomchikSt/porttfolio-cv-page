@@ -38,7 +38,7 @@ function StartSection() {
       className: "text-xl text-custom-green pb-1 pl-1 mt-4",
     },
     {
-      text: "Web Developer",
+      text: "Full-Stack Engineer",
       className: "text-5xl font-bold pl-0.5",
     },
   ];
