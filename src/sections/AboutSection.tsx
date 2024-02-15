@@ -2,18 +2,21 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
 
-import { SiRedux, SiVite } from "react-icons/si";
+import {
+  SiRedux,
+  SiNextdotjs,
+  SiVite,
+  SiReact,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiNodedotjs,
+  SiMongodb,
+} from "react-icons/si";
 import { RiSupabaseFill } from "react-icons/ri";
 import { FaGitAlt } from "react-icons/fa6";
-import {
-  BiLogoNodejs,
-  BiLogoDocker,
-  BiLogoReact,
-  BiLogoCss3,
-  BiLogoHtml5,
-  BiLogoJavascript,
-  BiLogoTypescript,
-} from "react-icons/bi";
+import { BiLogoNodejs, BiLogoDocker } from "react-icons/bi";
 
 import { headerTextVariants } from "../animations/headerText";
 
@@ -52,69 +55,69 @@ function AboutSection() {
 
   const frontStack = [
     {
-      logo: <BiLogoHtml5 size={"4rem"} />,
+      logo: <SiHtml5 size={"3rem"} className="mb-2" />,
       name: "HTML",
     },
     {
-      logo: <BiLogoCss3 size={"4rem"} />,
+      logo: <SiCss3 size={"3rem"} className="mb-2" />,
       name: "CSS",
     },
     {
-      logo: <BiLogoJavascript size={"4rem"} />,
+      logo: <SiJavascript size={"3rem"} className="mb-2" />,
       name: "JavaScript",
     },
     {
-      logo: <BiLogoTypescript size={"4rem"} />,
+      logo: <SiTypescript size={"3rem"} className="mb-2" />,
       name: "TypeScript",
     },
     {
-      logo: <BiLogoReact size={"4rem"} />,
+      logo: <SiReact size={"3rem"} className="mb-2" />,
       name: "React",
+    },
+    {
+      logo: <SiNextdotjs size={"3rem"} className="mb-2" />,
+      name: "Next.js",
     },
   ];
 
   const backStack = [
     {
-      logo: <BiLogoNodejs size={"4rem"} />,
+      logo: <SiNodedotjs size={"3rem"} className="mb-2" />,
       name: "Node.js",
     },
     {
-      logo: <RiSupabaseFill size={"3.4rem"} className="mt-2.5 pb-1" />,
+      logo: <SiMongodb size={"3rem"} className="mb-2" />,
+      name: "MongoDB",
+    },
+    {
+      logo: <RiSupabaseFill size={"3rem"} className="mb-2" />,
       name: "Supabase",
     },
     {
-      logo: <SiRedux size={"3.4rem"} className="mt-2.5 pb-2.5" />,
+      logo: <SiRedux size={"3rem"} className="mb-2" />,
       name: "Redux",
     },
     {
-      logo: <BiLogoDocker size={"4rem"} />,
+      logo: <BiLogoDocker size={"3rem"} className="mb-2" />,
       name: "Docker",
     },
     {
-      logo: <FaGitAlt size={"3.6rem"} className="mt-1.5 pb-1.5" />,
+      logo: <FaGitAlt size={"3rem"} className="mb-2" />,
       name: "Git",
     },
     {
-      logo: <SiVite size={"3.4rem"} className="mt-2 pb-1.5" />,
+      logo: <SiVite size={"3rem"} className="mb-2" />,
       name: "Vite",
     },
   ];
 
   const reactTechStack = [
-    "React Hooks",
-    "React Hook Form",
-    "React Router",
-    "React Query",
-    "Axios",
-    "Framer Motion",
-    "i18next",
-    "Next.js",
-    "Styled-Components",
     "Material UI",
     "Tailwind CSS",
     "CSS Modules",
-    "Bootstrap",
-    "and many more...",
+    "Styled-Components",
+    "React Bootstrap",
+    "Framer Motion",
   ];
 
   return (
@@ -220,7 +223,7 @@ function AboutSection() {
                 animate={inViewSkill ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                React Tech Stack:
+                React UI Libraries :
               </motion.p>
               <div className="flex flex-wrap">
                 {reactTechStack.map((tech, i) => (
