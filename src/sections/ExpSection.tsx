@@ -16,11 +16,11 @@ function ExpSection() {
   const workInfo = [
     {
       company: "Self-employed",
-      position: "Front-End Developer",
+      position: "Full-Stack Engineer",
       location: "Kyiv, Ukraine",
       date: "2023-present",
       description:
-        "Front-End Developer, focused on creating user-friendly interfaces. Expert in developing responsive UI, optimizing for cross-browser compatibility and adaptation for different screen sizes. Proficient in implementing user interface logic and design principles.",
+        "Full-Stack Developer, dedicated to crafting user-centric solutions with a focus on both front-end and back-end development. Expert in creating responsive and user-friendly interfaces, ensuring cross-browser compatibility, and adapting designs for various screen sizes on the front end. Proficient in implementing user interface logic and design principles. On the back-end side, skilled in server, database, and application logic development, ensuring seamless data flow and integration between front-end and back-end components. Experienced in using a wide range of frameworks and technologies to develop scalable, efficient, and maintainable web applications.",
       techStack: [
         "TypeScript",
         "React",
@@ -28,8 +28,8 @@ function ExpSection() {
         "Framer Motion",
         "i18next",
         "Material UI",
-        "Git",
-        "GitHub",
+        "Node.js",
+        "MySQL",
       ],
     },
   ];
