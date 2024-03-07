@@ -15,7 +15,7 @@ function ExpSection() {
 
   const workInfo = [
     {
-      company: "Self-employed",
+      company: "Liberty Dev",
       position: "Full-Stack Engineer",
       location: "Kyiv, Ukraine",
       date: "2023-present",
