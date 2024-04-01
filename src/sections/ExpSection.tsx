@@ -20,7 +20,7 @@ function ExpSection() {
       location: "Kyiv, Ukraine",
       date: "2023-present",
       description:
-        "Full-Stack Developer, dedicated to crafting user-centric solutions with a focus on both front-end and back-end development. Expert in creating responsive and user-friendly interfaces, ensuring cross-browser compatibility, and adapting designs for various screen sizes on the front end. Proficient in implementing user interface logic and design principles. On the back-end side, skilled in server, database, and application logic development, ensuring seamless data flow and integration between front-end and back-end components. Experienced in using a wide range of frameworks and technologies to develop scalable, efficient, and maintainable web applications.",
+        "Full-Stack Developer, dedicated to crafting user-centric solutions with a focus on both front-end and back-end development. Expert in creating responsive and user-friendly interfaces, ensuring cross-browser compatibility, and adapting designs for various screen sizes on the front end. Proficient in implementing user interface logic and design principles. On the back-end side, skilled in server, database, and application logic development, ensuring seamless data flow and integration between front-end and back-end components. Experienced in using a wide range of frameworks and technologies to develop scalable, efficient, and maintainable web applications.I also do testing.",
       techStack: [
         "TypeScript",
         "React",

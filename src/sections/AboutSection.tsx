@@ -13,6 +13,8 @@ import {
   SiTypescript,
   SiNodedotjs,
   SiMongodb,
+  SiCypress,
+  SiPostman,
 } from "react-icons/si";
 import { RiSupabaseFill } from "react-icons/ri";
 import { FaGitAlt } from "react-icons/fa6";
@@ -78,6 +80,10 @@ function AboutSection() {
       logo: <SiNextdotjs size={"3rem"} className="mb-2" />,
       name: "Next.js",
     },
+    {
+      logo: <SiCypress size={"3rem"} className="mb-2" />,
+      name: "Cypress",
+    },
   ];
 
   const backStack = [
@@ -106,8 +112,8 @@ function AboutSection() {
       name: "Git",
     },
     {
-      logo: <SiVite size={"3rem"} className="mb-2" />,
-      name: "Vite",
+      logo: <SiPostman size={"3rem"} className="mb-2" />,
+      name: "Postman",
     },
   ];
 
