@@ -96,7 +96,7 @@ function PortfolioSection() {
         "This is a full-stack web application for a tire shop. Offer an intuitive and user-friendly experience for purchasing tires. The website includes advanced filters for easy tire selection and is fully responsive, ensuring optimal performance on all browsers and screen sizes. The platform simplifies the tire buying process with its clear design and efficient functionality.",
       stack: ["TS", "React", "i18-next", "M Ui", "Framer Motion", "MySQL"],
       githubLink: "https://github.com/unreal998/top-kolesa-fe",
-      link: "https://top-kolesa-fe.vercel.app/",
+      link: "https://topkolesa.com.ua/",
       video: "./video/topKolesaTrailer.mp4",
     },
     {

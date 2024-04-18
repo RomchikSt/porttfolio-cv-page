@@ -96,7 +96,7 @@ function ContactSection() {
           animate={inViewDesc ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {`Let's Connect! If you're interested in web development collaborations, have questions, or just want to exchange ideas, feel free to reach out. I'm open to discussing projects that challenge and expand the boundaries of web technology, and I'm always eager to connect with like-minded individuals. Contact me here or through my social media channels – I'm looking forward to our conversation and the opportunity to collaborate on exciting projects.`}
+          {`Let's Connect! If you're interested in web development collaborations, have questions, or just want to exchange ideas, feel free to reach out. Contact me here or through my social media channels – I'm looking forward to our conversation and the opportunity to collaborate on exciting projects.`}
         </motion.p>
         <div className="mt-14 mb-8 flex flex-col gap-6 450px:flex-row">
           <Button

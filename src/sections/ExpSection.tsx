@@ -6,7 +6,7 @@ import { headerTextVariants } from "../animations/headerText";
 function ExpSection() {
   const [refHeader, inViewHeader] = useInView({
     triggerOnce: true,
-    threshold: 0.25,
+    threshold: 0.15,
   });
   const [refDesc, inViewDesc] = useInView({
     triggerOnce: true,
@@ -16,11 +16,11 @@ function ExpSection() {
   const workInfo = [
     {
       company: "Liberty Dev",
-      position: "Full-Stack Engineer",
+      position: "Full-Stack & AQA Engineer",
       location: "Kyiv, Ukraine",
-      date: "2023-present",
+      date: "Jul 2023 - present",
       description:
-        "Full-Stack Developer, dedicated to crafting user-centric solutions with a focus on both front-end and back-end development. Expert in creating responsive and user-friendly interfaces, ensuring cross-browser compatibility, and adapting designs for various screen sizes on the front end. Proficient in implementing user interface logic and design principles. On the back-end side, skilled in server, database, and application logic development, ensuring seamless data flow and integration between front-end and back-end components. Experienced in using a wide range of frameworks and technologies to develop scalable, efficient, and maintainable web applications.I also do testing.",
+        "I am engaged in the development of highly functional web and mobile applications and their optimization. Effectively integrated advanced front-end and back-end solutions using JavaScript, React, Node.js and other modern technologies. I also build websites using WordPress and Shopify. Creation of test automation using Cypress, Playwright and Postman, which ensures high quality and performance of applications. I develop detailed plans and scenarios of automated tests for regression and integration testing, which contributes to the stable and efficient operation of the system.",
       techStack: [
         "TypeScript",
         "React",
@@ -30,7 +30,19 @@ function ExpSection() {
         "Material UI",
         "Node.js",
         "MySQL",
+        "Cypress",
+        "Postman",
+        "Wordpress",
+        "Shopify",
       ],
+    },
+    {
+      company: "Noname Digital",
+      position: "QA Engineer",
+      location: "Kyiv, Ukraine",
+      date: "Apr 2024 - present",
+      description:
+        "Manual testing of mobile applications. Experienced in identifying, documenting, and reporting bugs to ensure optimal application quality and user experience. Executes detailed test plans and cases covering functional, regression, and acceptance testing. Works closely with development teams using various testing methodologies to ensure high application quality",
     },
   ];
 
@@ -77,7 +89,7 @@ function ExpSection() {
             </div>
             <p className="text-lg">{work.description}</p>
             <div className="flex flex-wrap flex-start">
-              {work.techStack.map((tech, i) => (
+              {work.techStack?.map((tech, i) => (
                 <motion.div
                   key={tech}
                   transition={{ duration: 0.5, delay: 0.2 + i / 30 }}

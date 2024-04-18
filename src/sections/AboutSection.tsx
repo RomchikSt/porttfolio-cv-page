@@ -15,6 +15,11 @@ import {
   SiMongodb,
   SiCypress,
   SiPostman,
+  SiPlaywright,
+  SiCucumber,
+  SiJenkins,
+  SiShopify,
+  SiWordpress,
 } from "react-icons/si";
 import { RiSupabaseFill } from "react-icons/ri";
 import { FaGitAlt } from "react-icons/fa6";
@@ -34,22 +39,21 @@ function AboutSection() {
 
   const knowMe = [
     {
-      text: `I am a Web Developer. My work involves creating and optimizing interactive features of websites and web applications. You can view some of my projects in the `,
+      text: `I am Full Stack and AQA Engineer. My experience covers the creation of attractive websites, web applications, cross-platform mobile applications and their automated testing. Some of my various projects are in the `,
       link: "portfolio",
       textLink: "Portfolio.",
     },
     {
-      text: `My development skills are focused on creating user-friendly interfaces, developing responsive interfaces, optimizing for cross-browser compatibility and implementing user interface logic and design principles.`,
+      text: `I specialize in developing cross-browser and cross-platform applications, ensuring they work optimally in different environments. I also do automated testing, which allows me to ensure a high level of product quality and reliability. This integrated approach allows you to achieve high performance and reliability in both application development and testing.`,
     },
     {
-      text: `My ability to constantly learn and keep up with the latest technologies allows me to effectively solve the challenges of modern projects, ensuring flexibility and a high level of development quality.`,
+      text: `I am constantly learning new technologies, which allows me to effectively solve the challenges of modern projects, ensuring flexibility and a high level of quality in development and testing.`,
     },
     {
-      text: `In my free time, I enjoy playing tennis and chess, which helps me develop strategic thinking and focus. Additionally, I love engaging in outdoor activities, which keeps me energetic and inspired for new projects.
-      `,
+      text: `In my free time, I play tennis and chess, which helps me develop strategic thinking and concentration. In addition, I love active recreation in the fresh air, which gives me energy and inspires new projects.`,
     },
     {
-      text: `Open to collaboration opportunities where I can contribute, learn, and grow. If you have a good opportunity that matches my skills and experience, don't hesitate to `,
+      text: `Open to cooperation. If you have projects that match my skills and experience, please `,
       link: "contact",
       textLink: "contact me.",
     },
@@ -81,12 +85,16 @@ function AboutSection() {
       name: "Next.js",
     },
     {
-      logo: <SiCypress size={"3rem"} className="mb-2" />,
-      name: "Cypress",
+      logo: <SiWordpress size={"3rem"} className="mb-2" />,
+      name: "Wordpress",
     },
   ];
 
   const backStack = [
+    {
+      logo: <SiShopify size={"3rem"} className="mb-2" />,
+      name: "Shopify",
+    },
     {
       logo: <SiNodedotjs size={"3rem"} className="mb-2" />,
       name: "Node.js",
@@ -108,12 +116,36 @@ function AboutSection() {
       name: "Docker",
     },
     {
+      logo: <SiVite size={"3rem"} className="mb-2" />,
+      name: "Vite",
+    },
+  ];
+
+  const aqaStack = [
+    {
       logo: <FaGitAlt size={"3rem"} className="mb-2" />,
       name: "Git",
+    },
+
+    {
+      logo: <SiCypress size={"3rem"} className="mb-2" />,
+      name: "Cypress",
+    },
+    {
+      logo: <SiPlaywright size={"3rem"} className="mb-2" />,
+      name: "Playwright",
+    },
+    {
+      logo: <SiCucumber size={"3rem"} className="mb-2" />,
+      name: "Cucumber",
     },
     {
       logo: <SiPostman size={"3rem"} className="mb-2" />,
       name: "Postman",
+    },
+    {
+      logo: <SiJenkins size={"3rem"} className="mb-2" />,
+      name: "Jenkins",
     },
   ];
 
@@ -207,6 +239,22 @@ function AboutSection() {
             </div>
             <div className="flex justify-center gap-[3%] mt-8 450px:gap-[5%]">
               {backStack.map((tech, i) => (
+                <motion.div
+                  key={tech.name}
+                  ref={refSkill}
+                  initial={{ y: "20%", opacity: 0 }}
+                  animate={inViewSkill ? { y: 0, opacity: 1 } : {}}
+                  transition={{ duration: 0.5, delay: 0.1 + i / 10 }}
+                >
+                  <div className="flex flex-col items-center text-center">
+                    <div>{tech.logo}</div>
+                    <p>{tech.name}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <div className="flex justify-center gap-[3%] mt-8 450px:gap-[5%]">
+              {aqaStack.map((tech, i) => (
                 <motion.div
                   key={tech.name}
                   ref={refSkill}
