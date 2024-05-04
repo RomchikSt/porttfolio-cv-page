@@ -42,7 +42,7 @@ function ExpSection() {
       location: "Kyiv, Ukraine",
       date: "Apr 2024 - present",
       description:
-        "Manual testing of mobile applications. Experienced in identifying, documenting, and reporting bugs to ensure optimal application quality and user experience. Executes detailed test plans and cases covering functional, regression, and acceptance testing. Works closely with development teams using various testing methodologies to ensure high application quality",
+        "Testing of mobile applications. Experienced in identifying, documenting, and reporting bugs to ensure optimal application quality and user experience. Executes detailed test plans and cases covering functional, regression, and acceptance testing. Works closely with development teams using various testing methodologies to ensure high application quality",
     },
   ];
 
