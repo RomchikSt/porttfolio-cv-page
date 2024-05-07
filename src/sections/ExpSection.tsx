@@ -38,11 +38,11 @@ function ExpSection() {
     },
     {
       company: "Noname Digital",
-      position: "QA Engineer",
+      position: "General QA Engineer",
       location: "Kyiv, Ukraine",
       date: "Apr 2024 - present",
       description:
-        "Testing of mobile applications. Experienced in identifying, documenting, and reporting bugs to ensure optimal application quality and user experience. Executes detailed test plans and cases covering functional, regression, and acceptance testing. Works closely with development teams using various testing methodologies to ensure high application quality",
+        "Testing of mobile and web applications. Experienced in identifying, documenting, and reporting bugs to ensure optimal application quality and user experience. Executes detailed test plans and cases covering functional, regression, and acceptance testing. Works closely with development teams using various testing methodologies to ensure high application quality",
     },
   ];
 
@@ -75,7 +75,7 @@ function ExpSection() {
             className="flex m-4 gap-2 flex-col items-start border rounded-3xl border-custom-green mt-8 p-6 bg-custom-black w-9/12 837px:w-3/5 1300px:w-[50rem]"
             initial={{ y: "40%", opacity: 0 }}
             animate={inViewDesc ? { y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.3 + i / 5 }}
           >
             <div className="flex justify-between w-full">
               <p className="text-2xl font-semibold">{work.company}</p>
